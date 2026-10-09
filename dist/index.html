@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
     rel="stylesheet">
-  <link rel="icon" type="image/jpeg" href="assets/hddo-logo.jpg">
+  <link rel="icon" type="image/jpeg" href="assets/hddo-logo.webp">
   <style>
     :root {
       --green: #0a764a;
@@ -1696,7 +1696,7 @@
     }
 
     .team-section {
-      display: none;
+      display: block;
       padding: 92px 0 100px;
       background: #fff;
       text-align: center
@@ -2687,6 +2687,20 @@
         max-height: 78px
       }
     }
+  
+    .team-wrap { display: flex; justify-content: center; margin-top: 36px; }
+    .training-grid-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 36px; }
+    .training-card { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--green); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: transform .2s ease, box-shadow .2s ease; }
+    .training-card:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(6, 62, 41, .09); }
+    .training-card-image { width: 100%; height: 220px; overflow: hidden; background: var(--mist); }
+    .training-card-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+    .training-card-body { padding: 24px 22px; display: flex; flex-direction: column; flex: 1; }
+    .training-card-body .eyebrow { margin-bottom: 8px; }
+    .training-card-body h3 { font: 600 1.35rem/1.2 var(--serif); margin: 6px 0 10px; letter-spacing: -.03em; color: var(--ink); }
+    .training-card-body p { color: #55635a; font-size: 14.5px; line-height: 1.55; margin: 0; }
+    @media(max-width: 900px) { .training-grid-three { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+    @media(max-width: 600px) { .training-grid-three { grid-template-columns: 1fr; } }
+
   </style>
 </head>
 
@@ -2694,10 +2708,10 @@
   <a class="skip" href="#main">Skip to main content</a>
   <header class="nav">
     <div class="shell"><a class="brand" href="#top" aria-label="HDDO home"><img class="brand-logo"
-          src="assets/hddo-logo.jpg" alt="HDDO logo"><span>HDDO<small>Holistic Disability Development
+          src="assets/hddo-logo.webp" alt="HDDO logo" width="58" height="58" loading="eager" decoding="async"><span>HDDO<small>Holistic Disability Development
             Organization</small></span></a>
       <nav class="navlinks" aria-label="Main navigation"><a href="#about">About</a><a href="#programs">Our work</a><a
-          href="#impact">Why inclusion</a><a href="#partners">Partners</a><a class="join" href="#contact">Work with
+          href="#training">Training</a><a href="#team">Team</a><a href="#impact">Why inclusion</a><a href="#partners">Partners</a><a class="join" href="#contact">Work with
           us</a></nav>
     </div>
   </header>
@@ -2714,19 +2728,51 @@
           <div class="hero-footer"><span>01</span> Disability inclusion is community development.</div>
         </div>
         <div class="hero-visual"><img src="assets/hddo-community-hero.webp"
-            alt="Community members with and without disabilities meeting together outdoors in Ethiopia"></div>
+            alt="Community members with and without disabilities meeting together outdoors in Ethiopia" width="800" height="600" fetchpriority="high" loading="eager" decoding="async"></div>
       </div>
     </section>
+
+    <!-- Partner Marquee with ALL 6 Partners -->
+    <section class="partner-marquee" id="partners">
+      <div class="shell">
+        <div class="partner-marquee-intro">
+          <div>
+            <div class="eyebrow green">Working together</div>
+            <p>Partners helping make inclusion practical across the Somali Region.</p>
+          </div>
+          <p>Our partners</p>
+        </div>
+      </div>
+      <div class="partner-track-wrap" aria-label="HDDO partner logos">
+        <div class="partner-track">
+          <div class="partner-set">
+            <div class="partner-logo"><img class="logo-health" src="assets/partner-health-bureau.webp" loading="lazy" decoding="async" alt="Somali Regional State Health Bureau"></div>
+            <div class="partner-logo"><img src="assets/partner-skills-bureau.webp" loading="lazy" decoding="async" alt="Somali Regional State Skills and Job Creation Bureau"></div>
+            <div class="partner-logo"><img src="assets/partner-labor-social-affairs.webp" loading="lazy" decoding="async" alt="Bureau of Labor and Social Affairs"></div>
+            <div class="partner-logo"><img src="assets/partner-education-bureau.webp" loading="lazy" decoding="async" alt="Somali Regional State Education Bureau"></div>
+            <div class="partner-logo"><img src="assets/partner-jigjiga-university.webp" loading="lazy" decoding="async" alt="Jaamacadda Jigjiga / Jigjiga University"></div>
+            <div class="partner-logo"><img src="assets/partner-women-children.webp" loading="lazy" decoding="async" alt="Xafiiska Arimaha Haweenka &amp; Caruurta DDS"></div>
+          </div>
+          <div class="partner-set" aria-hidden="true">
+            <div class="partner-logo"><img class="logo-health" src="assets/partner-health-bureau.webp" loading="lazy" decoding="async" alt=""></div>
+            <div class="partner-logo"><img src="assets/partner-skills-bureau.webp" loading="lazy" decoding="async" alt=""></div>
+            <div class="partner-logo"><img src="assets/partner-labor-social-affairs.webp" loading="lazy" decoding="async" alt=""></div>
+            <div class="partner-logo"><img src="assets/partner-education-bureau.webp" loading="lazy" decoding="async" alt=""></div>
+            <div class="partner-logo"><img src="assets/partner-jigjiga-university.webp" loading="lazy" decoding="async" alt=""></div>
+            <div class="partner-logo"><img src="assets/partner-women-children.webp" loading="lazy" decoding="async" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="shell intro" id="about">
       <div>
         <div class="eyebrow green">Who we are</div>
         <h2>Inclusion is not a special service. It is how every service should work.</h2>
       </div>
       <div class="intro-copy">
-        <p>Holistic Disability Development Organization is an Ethiopian local non-governmental and non-profit
-          organization. We exist to promote the rights, dignity and full inclusion of persons with disabilities.</p>
-        <p>Starting in the Somali Region and working across Ethiopia, HDDO brings disability inclusion into education,
-          health, livelihoods, humanitarian action and community development.</p>
+        <p>Holistic Disability Development Organization is an Ethiopian local non-governmental and non-profit organization. We exist to promote <span class="text-accent">rights, dignity and full inclusion</span> for persons with disabilities.</p>
+        <p>Starting in the <span class="text-accent">Somali Region</span> and working across Ethiopia, HDDO brings disability inclusion into <span class="text-accent">education, health and livelihoods</span>, humanitarian action and community development.</p>
         <div class="principles">
           <div class="principle"><b>Rights first</b><span>Equal dignity, participation and opportunity.</span></div>
           <div class="principle"><b>Led locally</b><span>Solutions shaped with communities and OPDs.</span></div>
@@ -2735,6 +2781,7 @@
         </div>
       </div>
     </section>
+
     <section class="statement">
       <div class="shell statement-grid">
         <div>
@@ -2749,6 +2796,7 @@
         </div>
       </div>
     </section>
+
     <section class="shell programs" id="programs">
       <div class="section-top">
         <div>
@@ -2760,45 +2808,56 @@
       </div>
       <div class="program-list">
         <article class="program">
-          <div class="program-number">01</div>
+          <div class="program-number"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 12 2l9 3.5-9 3.5-9-3.5Z"/><path d="M6 8v5.5c2.8 2 9.2 2 12 0V8"/></svg></div>
           <h3>Inclusive education</h3>
-          <p>Supporting schools, teachers and families so children and young people with disabilities learn and thrive.
-          </p>
+          <p>Supporting schools, teachers and families so children and young people with disabilities learn and thrive.</p>
           <div class="program-arrow">↗</div>
         </article>
         <article class="program">
-          <div class="program-number">02</div>
+          <div class="program-number"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3Z"/></svg></div>
           <h3>Health and rehabilitation</h3>
           <p>Advancing accessible healthcare, rehabilitation and disability-inclusive health systems.</p>
           <div class="program-arrow">↗</div>
         </article>
         <article class="program">
-          <div class="program-number">03</div>
+          <div class="program-number"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10m6 10V6m6 14V3m4 17H2"/><path d="m4 8 5-4 5 2 6-5"/></svg></div>
           <h3>Livelihoods and economic empowerment</h3>
           <p>Creating pathways to skills, employment, entrepreneurship and financial resilience.</p>
           <div class="program-arrow">↗</div>
         </article>
         <article class="program">
-          <div class="program-number">04</div>
+          <div class="program-number"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 6h14M7 6l-4 7h8L7 6Zm10 0-4 7h8l-4-7ZM8 21h8"/></svg></div>
           <h3>Rights, advocacy and accessibility</h3>
           <p>Removing barriers through policy change, universal design and meaningful participation.</p>
           <div class="program-arrow">↗</div>
         </article>
         <article class="program">
-          <div class="program-number">05</div>
+          <div class="program-number"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.7 3.2 8 7.5 9.5 4.3-1.5 7.5-4.8 7.5-9.5V6L12 3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></div>
           <h3>Protection and humanitarian inclusion</h3>
           <p>Ensuring emergency response, social protection and child protection are accessible to all.</p>
           <div class="program-arrow">↗</div>
         </article>
         <article class="program">
-          <div class="program-number">06</div>
+          <div class="program-number"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8.5h16v11H4z"/><path d="M8 8.5V6.8A2.8 2.8 0 0 1 10.8 4h2.4A2.8 2.8 0 0 1 16 6.8v1.7M4 13h16M10 13v2h4v-2"/></svg></div>
           <h3>Resilient communities</h3>
           <p>Integrating WASH, nutrition, mental health and community-based inclusive development.</p>
           <div class="program-arrow">↗</div>
         </article>
+        <article class="program">
+          <div class="program-number"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8.5h16v11H4z"/><path d="M8 8.5V6.8A2.8 2.8 0 0 1 10.8 4h2.4A2.8 2.8 0 0 1 16 6.8v1.7M4 13h16M10 13v2h4v-2"/></svg></div>
+          <h3>Youth Skills Development and Employment</h3>
+          <p>Expanding practical skills, employment pathways and economic opportunities for young people with disabilities.</p>
+          <div class="program-arrow">↗</div>
+        </article>
+        <article class="program">
+          <div class="program-number"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M8.2 14.5A7 7 0 1 1 16 14c-.9.8-1.5 1.4-1.8 2H9.8c-.3-.6-.8-1.1-1.6-1.5Z"/><path d="M12 5v2M5.8 8.2l1.4 1M18.2 8.2l-1.4 1"/></svg></div>
+          <h3>Mental Health and Psychosocial Support (MHPSS)</h3>
+          <p>Promoting accessible, community-based mental health and psychosocial support for persons with disabilities, families and communities.</p>
+          <div class="program-arrow">↗</div>
+        </article>
       </div>
-      <div class="feature"><img src="assets/inclusive-education.webp"
-          alt="Teacher and schoolchildren with disabilities learning together in an inclusive classroom">
+      <div class="feature"><img src="assets/inclusive-education.webp" loading="lazy" decoding="async"
+          alt="Teacher and schoolchildren with disabilities learning together in an inclusive classroom" width="600" height="400">
         <div class="feature-copy">
           <div class="eyebrow">Inclusive education</div>
           <h3>Learning spaces where every child is expected to succeed.</h3>
@@ -2808,6 +2867,86 @@
         </div>
       </div>
     </section>
+
+    <!-- Community & Capacity Building Training with ALL 3 Photos -->
+    <section class="shell training" id="training">
+      <div class="section-top">
+        <div>
+          <div class="eyebrow green">Community Action</div>
+          <h2>Capacity building and grassroots inclusion.</h2>
+        </div>
+        <p>Empowering persons with disabilities, families and community facilitators through practical learning and dialogue.</p>
+      </div>
+      <div class="training-grid-three">
+        <article class="training-card">
+          <div class="training-card-image">
+            <img src="assets/hddo-training-participants.webp" loading="lazy" decoding="async" alt="Participants attending an HDDO community training in Somali Region">
+          </div>
+          <div class="training-card-body">
+            <div class="eyebrow green">Community Training</div>
+            <h3>Knowledge that strengthens disability inclusion.</h3>
+            <p>Practical learning spaces that strengthen the knowledge, confidence and collaboration needed to make local services inclusive.</p>
+          </div>
+        </article>
+        <article class="training-card">
+          <div class="training-card-image">
+            <img src="assets/hddo-training-facilitator.webp" loading="lazy" decoding="async" alt="HDDO facilitator delivering a disability inclusion training session">
+          </div>
+          <div class="training-card-body">
+            <div class="eyebrow green">Capacity Building</div>
+            <h3>Learning led close to the community.</h3>
+            <p>Equipping facilitators and local advocates with the skills and methodologies to champion rights and accessibility.</p>
+          </div>
+        </article>
+        <article class="training-card">
+          <div class="training-card-image">
+            <img src="assets/hddo-community-meeting.webp" loading="lazy" decoding="async" alt="Persons with disabilities and community members meeting in Jigjiga">
+          </div>
+          <div class="training-card-body">
+            <div class="eyebrow green">Community Dialogue</div>
+            <h3>Voices of persons with disabilities at the center.</h3>
+            <p>Direct community forums where persons with disabilities and families meet to shape decisions and identify barriers.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team">
+      <div class="shell">
+        <div class="eyebrow green" style="margin-bottom:12px;">Our Leadership</div>
+        <h2>Our Team</h2>
+        <div class="team-accent" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="team-wrap">
+          <article class="team-card">
+            <div class="team-card-photo">
+              <img src="assets/hddo-leadership.webp" loading="lazy" decoding="async" alt="HDDO Executive Director">
+            </div>
+            <h3>HDDO Leadership</h3>
+            <p>Executive Director</p>
+            <a class="team-phone" href="https://wa.me/251910199944" target="_blank" rel="noopener" aria-label="Contact the Executive Director on WhatsApp">0910199944</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Mission Statement -->
+    <section class="leadership" id="leadership">
+      <div class="shell leadership-grid">
+        <div class="leadership-photo-wrap">
+          <div class="leadership-photo">
+            <img src="assets/hddo-leadership.webp" loading="lazy" decoding="async" alt="HDDO leadership representative">
+          </div>
+          <span class="leadership-role">Executive Director</span>
+        </div>
+        <div>
+          <div class="eyebrow">Leadership</div>
+          <h2>Local leadership, accountable action.</h2>
+          <p>HDDO is led by people committed to the rights, dignity and participation of persons with disabilities. Our leadership works with communities, institutions and partners to turn inclusion into practical action.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="shell impact" id="impact">
       <div class="impact-grid">
         <div class="impact-text">
@@ -2820,11 +2959,12 @@
             <div class="pillar"><b>02</b><span>More independent livelihoods and economic opportunity</span></div>
             <div class="pillar"><b>03</b><span>Communities that are safer, more resilient and equitable</span></div>
           </div>
-        </div><img src="assets/livelihoods.webp"
-          alt="Entrepreneurs with disabilities collaborating in a community enterprise workshop">
+        </div><img src="assets/livelihoods.webp" loading="lazy" decoding="async"
+          alt="Entrepreneurs with disabilities collaborating in a community enterprise workshop" width="600" height="400">
       </div>
     </section>
-    <section class="partner-band" id="partners">
+
+    <section class="partner-band">
       <div class="shell">
         <div>
           <div class="eyebrow" style="color:var(--lime)">Partnership</div>
@@ -2837,6 +2977,7 @@
             partners</span><span>Private sector</span></div>
       </div>
     </section>
+
     <section class="shell contact" id="contact">
       <div class="contact-card">
         <div>
@@ -2852,11 +2993,12 @@
       </div>
     </section>
   </main>
+
   <footer class="footer">
     <div class="shell">
       <div class="footer-main">
         <div class="footer-about">
-          <div class="footer-brand"><img class="footer-logo" src="assets/hddo-logo.jpg" alt="">
+          <div class="footer-brand"><img class="footer-logo" src="assets/hddo-logo.webp" alt="HDDO logo" width="58" height="58" loading="lazy" decoding="async">
             <div><b>HDDO</b><span>Holistic Disability Development Organization</span></div>
           </div>
           <p class="footer-summary">Advancing the rights, dignity and full participation of persons with disabilities
@@ -2873,10 +3015,11 @@
         </div>
         <div><span class="footer-title">Explore</span>
           <nav class="footer-links" aria-label="Footer navigation"><a href="#about">About HDDO</a><a
-              href="#programs">Our work</a><a href="#impact">Why inclusion</a><a href="#partners">Partners</a></nav>
+              href="#programs">Our work</a><a href="#training">Training</a><a href="#team">Team</a><a href="#impact">Why inclusion</a><a href="#partners">Partners</a></nav>
         </div>
         <div class="footer-contact"><span class="footer-title">Connect</span><a
             href="mailto:info@holisticdisability.org">info@holisticdisability.org</a>
+          <a class="footer-whatsapp" href="https://wa.me/251910199944" target="_blank" rel="noopener" aria-label="Contact HDDO on WhatsApp">WhatsApp: 0910199944</a>
           <p>Jigjiga<br>Somali Regional State, Ethiopia</p>
         </div>
       </div>
@@ -2886,60 +3029,8 @@
       </div>
     </div>
   </footer>
+
   <script>
-    const aboutSection = document.querySelector('.intro');
-    if (aboutSection) {
-      aboutSection.insertAdjacentHTML('beforebegin', `
-      <section class="partner-marquee" id="partners"><div class="shell"><div class="partner-marquee-intro"><div><div class="eyebrow green">Working together</div><p>Partners helping make inclusion practical across the Somali Region.</p></div><p>Our partners</p></div></div><div class="partner-track-wrap" aria-label="HDDO partner logos"><div class="partner-track"><div class="partner-set"><div class="partner-logo"><img class="logo-health" src="assets/partner-health-bureau.webp" alt="Somali Regional State Health Bureau"></div><div class="partner-logo"><img src="assets/partner-skills-bureau.webp" alt="Somali Regional State Skills and Job Creation Bureau"></div><div class="partner-logo"><img src="assets/partner-labor-social-affairs.webp" alt="Bureau of Labor and Social Affairs"></div><div class="partner-logo"><img src="assets/partner-education-bureau.webp" alt="Somali Regional State Education Bureau"></div></div><div class="partner-set" aria-hidden="true"><div class="partner-logo"><img class="logo-health" src="assets/partner-health-bureau.webp" alt=""></div><div class="partner-logo"><img src="assets/partner-skills-bureau.webp" alt=""></div><div class="partner-logo"><img src="assets/partner-labor-social-affairs.webp" alt=""></div><div class="partner-logo"><img src="assets/partner-education-bureau.webp" alt=""></div></div></div></div></section>
-    `);
-    }
-    const aboutParagraphs = document.querySelectorAll('.intro-copy > p');
-    if (aboutParagraphs.length >= 2) {
-      aboutParagraphs[0].innerHTML = 'Holistic Disability Development Organization is an Ethiopian local non-governmental and non-profit organization. We exist to promote <span class="text-accent">rights, dignity and full inclusion</span> for persons with disabilities.';
-      aboutParagraphs[1].innerHTML = 'Starting in the <span class="text-accent">Somali Region</span> and working across Ethiopia, HDDO brings disability inclusion into <span class="text-accent">education, health and livelihoods</span>, humanitarian action and community development.';
-    }
-    const footerContact = document.querySelector('.footer-contact');
-    if (footerContact) {
-      footerContact.insertAdjacentHTML('beforeend', '<a class="footer-whatsapp" href="https://wa.me/251910199944" target="_blank" rel="noopener" aria-label="Contact HDDO on WhatsApp">WhatsApp: 0910199944</a>');
-    }
-    const impactSection = document.querySelector('#impact');
-    impactSection.insertAdjacentHTML('beforebegin', `
-    <section class="shell training" id="training"><div class="training-grid"><article class="training-main"><img src="assets/hddo-training-participants.jpg" alt="Participants attending an HDDO community training"><div><div class="eyebrow">Community training</div><h3> Capacity Building knowledge that strengthens disability inclusion.</h3></div></article><article class="training-note"><div><div class="eyebrow green">Capacity building</div><h3>Learning led close to the community.</h3><p>HDDO supports practical learning spaces that strengthen the knowledge, confidence and collaboration needed to make services inclusive.</p></div><img src="assets/hddo-training-facilitator.jpg" alt="HDDO facilitator delivering a disability inclusion training"></article></div></section>
-    <section class="leadership" id="leadership"><div class="shell leadership-grid"><div class="leadership-photo"><img src="assets/hddo-leadership.jpg" alt="HDDO leadership representative"></div><div><div class="eyebrow">Leadership</div><h2>Local leadership, accountable action.</h2><p>HDDO is led by people committed to the rights, dignity and participation of persons with disabilities. Our leadership works with communities, institutions and partners to turn inclusion into practical action.</p></div></div></section>
-  `);
-    const leadershipSection = document.querySelector('#leadership');
-    const leadershipPhoto = leadershipSection?.querySelector('.leadership-photo');
-    if (leadershipPhoto && !leadershipPhoto.parentElement.classList.contains('leadership-photo-wrap')) {
-      const wrap = document.createElement('div');
-      wrap.className = 'leadership-photo-wrap';
-      leadershipPhoto.parentElement.insertBefore(wrap, leadershipPhoto);
-      wrap.appendChild(leadershipPhoto);
-      wrap.insertAdjacentHTML('beforeend', '<span class="leadership-role">Executive Director</span>');
-    }
-    if (leadershipSection) {
-      leadershipSection.insertAdjacentHTML('beforebegin', `<section class="team-section" id="team"><div class="shell"><h2>Our Team</h2><div class="team-accent" aria-hidden="true"><i></i><i></i><i></i><i></i></div><article class="team-card"><div class="team-card-photo"><img src="assets/hddo-leadership.jpg" alt="HDDO Executive Director"></div><h3>HDDO Leadership</h3><p>Executive Director</p><a class="team-phone" href="https://wa.me/251910199944" target="_blank" rel="noopener" aria-label="Contact the Executive Director on WhatsApp">0910199944</a></article></div></section>`);
-    }
-    const programList = document.querySelector('.program-list');
-    if (programList) {
-      programList.insertAdjacentHTML('beforeend', `
-      <article class="program"><div class="program-number">07</div><h3>Youth Skills Development and Employment</h3><p>Expanding practical skills, employment pathways and economic opportunities for young people with disabilities.</p><div class="program-arrow">↗</div></article>
-      <article class="program"><div class="program-number">08</div><h3>Mental Health and Psychosocial Support (MHPSS)</h3><p>Promoting accessible, community-based mental health and psychosocial support for persons with disabilities, families and communities.</p><div class="program-arrow">↗</div></article>
-    `);
-    }
-    const programIcons = [
-      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 12 2l9 3.5-9 3.5-9-3.5Z"/><path d="M6 8v5.5c2.8 2 9.2 2 12 0V8"/></svg>',
-      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3Z"/></svg>',
-      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10m6 10V6m6 14V3m4 17H2"/><path d="m4 8 5-4 5 2 6-5"/></svg>',
-      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 6h14M7 6l-4 7h8L7 6Zm10 0-4 7h8l-4-7ZM8 21h8"/></svg>',
-      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.7 3.2 8 7.5 9.5 4.3-1.5 7.5-4.8 7.5-9.5V6L12 3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>',
-      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8.5h16v11H4z"/><path d="M8 8.5V6.8A2.8 2.8 0 0 1 10.8 4h2.4A2.8 2.8 0 0 1 16 6.8v1.7M4 13h16M10 13v2h4v-2"/></svg>',
-      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M8.2 14.5A7 7 0 1 1 16 14c-.9.8-1.5 1.4-1.8 2H9.8c-.3-.6-.8-1.1-1.6-1.5Z"/><path d="M12 5v2M5.8 8.2l1.4 1M18.2 8.2l-1.4 1"/></svg>'
-    ];
-    document.querySelectorAll('.program-number').forEach((icon, index) => {
-      if (!programIcons[index]) return;
-      icon.innerHTML = programIcons[index];
-      icon.setAttribute('aria-hidden', 'true');
-    });
     (() => {
       const nav = document.querySelector('.nav');
       let lastY = window.scrollY;
@@ -2952,5 +3043,4 @@
     })();
   </script>
 </body>
-
 </html>
