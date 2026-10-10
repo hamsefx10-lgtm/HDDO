@@ -1734,7 +1734,7 @@
 
     .team-card {
       width: min(360px, 100%);
-      margin: 0 auto;
+      margin: 0;
       padding: 0 24px 34px;
       background: #fff;
       border: 1px solid rgba(23, 35, 56, .07);
@@ -2688,7 +2688,14 @@
       }
     }
   
-    .team-wrap { display: flex; justify-content: center; margin-top: 36px; }
+    .team-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
     
     
     
@@ -2891,17 +2898,23 @@
     <!-- Team Section -->
     <section class="team-section" id="team">
       <div class="shell">
-        <div class="eyebrow green" style="margin-bottom:12px;">Our Leadership</div>
+        <div class="eyebrow green" style="margin-bottom:12px;">Our Team</div>
         <h2>Our Team</h2>
         <div class="team-accent" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         <div class="team-wrap">
           <article class="team-card">
             <div class="team-card-photo">
-              <img src="assets/hddo-leadership.webp" loading="lazy" decoding="async" alt="HDDO Executive Director">
+              <img src="assets/hddo-team-program-director.webp" loading="lazy" decoding="async" alt="Abdullahi Hassan Gal'eri - Program Director">
             </div>
-            <h3>HDDO Leadership</h3>
-            <p>Executive Director</p>
-            <a class="team-phone" href="https://wa.me/251910199944" target="_blank" rel="noopener" aria-label="Contact the Executive Director on WhatsApp">0910199944</a>
+            <h3>Abdullahi Hassan Gal'eri</h3>
+            <p>Program Director</p>
+          </article>
+          <article class="team-card">
+            <div class="team-card-photo">
+              <img src="assets/hddo-team-finance-director.webp" loading="lazy" decoding="async" alt="Maryam Sheikh Hassan - Finance Director">
+            </div>
+            <h3>Maryam Sheikh Hassan</h3>
+            <p>Finance Director</p>
           </article>
         </div>
       </div>
