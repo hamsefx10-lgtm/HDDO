@@ -335,8 +335,9 @@
     }
 
     .statement h2 {
-      font: 600 clamp(2.4rem, 4vw, 4.3rem)/1 var(--serif);
-      letter-spacing: -.055em;
+      font: 500 clamp(1.08rem, 1.25vw, 1.22rem)/1.65 var(--sans);
+      letter-spacing: normal;
+      color: #172338;
       margin: 17px 0
     }
 
@@ -1272,8 +1273,12 @@
     }
 
     .statement h2 {
-      font-size: clamp(2.65rem, 4vw, 4.15rem);
-      line-height: 1.05;
+      font-family: var(--sans);
+      font-size: clamp(1.08rem, 1.25vw, 1.22rem);
+      font-weight: 500;
+      line-height: 1.65;
+      letter-spacing: normal;
+      color: #172338;
       max-width: 560px;
       margin: 18px 0 0
     }
@@ -1732,10 +1737,18 @@
       border-radius: 999px
     }
 
+    .team-intro {
+      max-width: 680px;
+      margin: 16px auto 0;
+      color: #64748b;
+      font-size: clamp(1rem, 1.2vw, 1.12rem);
+      line-height: 1.65;
+    }
+
     .team-card {
-      width: min(360px, 100%);
+      width: min(340px, 100%);
       margin: 0;
-      padding: 0 24px 34px;
+      padding: 0 20px 32px;
       background: #fff;
       border: 1px solid rgba(23, 35, 56, .07);
       box-shadow: 0 18px 55px rgba(23, 35, 56, .08);
@@ -1743,13 +1756,13 @@
     }
 
     .team-card-photo {
-      width: 270px;
-      height: 270px;
-      margin: -4px auto 24px;
+      width: 240px;
+      height: 240px;
+      margin: -4px auto 22px;
       border-radius: 50%;
       overflow: hidden;
       background: #edf2f8;
-      border: 8px solid #fff;
+      border: 7px solid #fff;
       box-shadow: 0 10px 26px rgba(23, 35, 56, .10)
     }
 
@@ -1874,10 +1887,14 @@
     }
 
     .statement h2 {
-      font-size: clamp(2rem, 3.15vw, 3.35rem);
-      line-height: 1.12;
+      font-family: var(--sans);
+      font-size: clamp(1.08rem, 1.25vw, 1.22rem);
+      font-weight: 500;
+      line-height: 1.65;
       max-width: 590px;
-      letter-spacing: -.045em
+      letter-spacing: normal;
+      color: #172338;
+      margin: 18px 0 0;
     }
 
     .statement-grid>div:last-child {
@@ -1918,7 +1935,9 @@
 
       .statement h2 {
         max-width: 760px;
-        font-size: clamp(2rem, 6vw, 3.2rem)
+        font-size: clamp(1.05rem, 4vw, 1.18rem);
+        line-height: 1.6;
+        letter-spacing: normal;
       }
     }
 
@@ -2011,8 +2030,7 @@
         padding: 12px 14px
       }
 
-      .intro h2,
-      .statement h2 {
+      .intro h2 {
         font-size: clamp(2rem, 10vw, 3rem);
         line-height: 1.08
       }
@@ -2692,7 +2710,7 @@
       display: flex;
       justify-content: center;
       align-items: stretch;
-      gap: 32px;
+      gap: 28px;
       flex-wrap: wrap;
       margin-top: 36px;
     }
@@ -2895,13 +2913,21 @@
       </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- Leadership & Team Section -->
     <section class="team-section" id="team">
-      <div class="shell">
-        <div class="eyebrow green" style="margin-bottom:12px;">Our Team</div>
-        <h2>Our Team</h2>
+      <div class="shell" id="leadership">
+        <div class="eyebrow green" style="margin-bottom:12px;">Leadership & Team</div>
+        <h2>Local leadership, accountable action.</h2>
+        <p class="team-intro">HDDO is led by people committed to the rights, dignity and participation of persons with disabilities. Our leadership works with communities, institutions and partners to turn inclusion into practical action.</p>
         <div class="team-accent" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         <div class="team-wrap">
+          <article class="team-card">
+            <div class="team-card-photo">
+              <img src="assets/hddo-team-executive-director.webp" loading="lazy" decoding="async" alt="Dubad Hassan Yusuf - Executive Director">
+            </div>
+            <h3>Dubad Hassan Yusuf</h3>
+            <p>Executive Director</p>
+          </article>
           <article class="team-card">
             <div class="team-card-photo">
               <img src="assets/hddo-team-program-director.webp" loading="lazy" decoding="async" alt="Abdullahi Hassan Gal'eri - Program Director">
@@ -2916,23 +2942,6 @@
             <h3>Maryam Sheikh Hassan</h3>
             <p>Finance Director</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Leadership Mission Statement -->
-    <section class="leadership" id="leadership">
-      <div class="shell leadership-grid">
-        <div class="leadership-photo-wrap">
-          <div class="leadership-photo">
-            <img src="assets/hddo-leadership.webp" loading="lazy" decoding="async" alt="HDDO leadership representative">
-          </div>
-          <span class="leadership-role">Executive Director</span>
-        </div>
-        <div>
-          <div class="eyebrow">Leadership</div>
-          <h2>Local leadership, accountable action.</h2>
-          <p>HDDO is led by people committed to the rights, dignity and participation of persons with disabilities. Our leadership works with communities, institutions and partners to turn inclusion into practical action.</p>
         </div>
       </div>
     </section>
