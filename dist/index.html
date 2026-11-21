@@ -44,6 +44,21 @@
       scroll-behavior: smooth
     }
 
+    #netlify-badge,
+    .netlify-badge,
+    [class*="netlify-badge"],
+    [id*="netlify-badge"],
+    iframe[src*="netlify"],
+    [data-netlify-deploy-id],
+    #netlify-identity-widget,
+    .netlify-drawer-container,
+    [data-netlify-drawer] {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
     body {
       margin: 0;
       background: var(--white);
